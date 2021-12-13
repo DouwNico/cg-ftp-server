@@ -1,0 +1,11 @@
+# met deze settings:
+Match group sftpgroup1
+ChrootDirectory /home
+X11Forwarding no
+AllowTcpForwarding no
+ForceCommand internal-sftp
+
+# voor het toe staan van wachtwoord auth.
+PasswordAuthentication yes
+ChallengeResponseAuthentication yes
+UsePAM no
