@@ -1,0 +1,17 @@
+#cloud-config
+runcmd:
+  - mkdir /run/script
+  - [
+      wget,
+      "https://raw.githubusercontent.com/DouwNico/cg-ftp-server/main/script.sh",
+      -O,
+      /run/script/script.sh,
+    ]
+  - [
+      wget,
+      "https://raw.githubusercontent.com/DouwNico/cg-ftp-server/main/sshd_config",
+      -O,
+      /run/script/sshd_config,
+    ]
+  - chmod +x /run/script/script.sh
+  - /run/script/script.sh
