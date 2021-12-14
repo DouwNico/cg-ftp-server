@@ -117,6 +117,7 @@ Subsystem	sftp	/usr/lib/openssh/sftp-server
 
 # Example of overriding settings on a per-user basis
 Match group sftpgroup1
+Match group sftpgroup2
 ChrootDirectory /home
 X11Forwarding no
 AllowTcpForwarding no
