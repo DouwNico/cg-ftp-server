@@ -5,7 +5,8 @@ add_a_user() {
     PASSWORD=$2
     GROUP=$3
     echo "Adding user $USER ..."
-    useradd -m $USER -p $PASSWORD -g $GROUP
+    useradd -m $USER -g $GROUP
+    echo $USER:$PASSWORD | chpasswd
     # passwd $USER $PASSWORD
     chmod 700 /home/$USER
     echo "Added user $USER to $GROUP"
