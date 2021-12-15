@@ -21,7 +21,7 @@ add_a_user sftpuser2 W@chtwoord sftpgroup2
 add_a_user douwe W@chtwoord sftpgroup2
 add_a_user pepijn W@chtwoord sftpgroup2
 echo "copy config to destination"
-cp --force ./sshd_config /etc/ssh/sshd_config
+cp --force /run/script/sshd_config /etc/ssh/sshd_config
 echo "restarting ssh service"
 systemctl restart ssh
 echo "End of script..."
